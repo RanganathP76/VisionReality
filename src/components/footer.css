@@ -1,0 +1,8 @@
+.vr-footer{margin-top:64px; background:linear-gradient(180deg, transparent, #fff); border-top:1px solid rgba(0,0,0,.06)}
+.foot{display:grid; grid-template-columns: 2fr 1fr 1fr; gap:24px; padding: 48px 0}
+.foot .brand h4{margin:0; font-size:1.4rem}
+.foot .brand .gold{color:var(--accent)}
+.foot .col h5{margin:0 0 12px 0; font-size:1rem}
+.foot .col a{display:block; margin:6px 0; color:var(--text)}
+.tiny{padding: 14px 0 32px; color:var(--muted); font-size:.9rem; border-top:1px dashed rgba(0,0,0,.06)}
+@media (max-width:900px){ .foot{grid-template-columns:1fr} }

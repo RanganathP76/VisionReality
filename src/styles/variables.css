@@ -1,0 +1,12 @@
+:root{
+  --bg:#fdfcf8;            /* creamy backdrop */
+  --surface:#ffffff;
+  --text:#1a1a1a;          /* rich black */
+  --muted:#6b7280;         /* slate gray */
+  --accent:#c7a356;        /* soft gold */
+  --accent-2:#1e3a8a;      /* deep navy */
+  --ring: rgba(199,163,86,.35);
+  --shadow: 0 10px 30px rgba(30, 58, 138, .08);
+  --radius: 18px;
+  --maxw: 1200px;
+}
