@@ -68,7 +68,7 @@ export default function Contact() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1 }}
             >
-              <strong>Email:</strong> hello@visionreality.com
+              <strong>Email:</strong> visionreality4uofficial@gmail.com
             </motion.p>
             <motion.p
               className="muted"
@@ -76,7 +76,7 @@ export default function Contact() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.3 }}
             >
-              <strong>Phone:</strong> +91 98765 43210
+              <strong>Phone:</strong> +91 80500 84991
             </motion.p>
           </motion.div>
 

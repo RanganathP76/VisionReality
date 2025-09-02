@@ -1,25 +1,14 @@
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Code2, Smartphone, Megaphone } from "lucide-react";
 
 export default function Home() {
   const services = [
-    {
-      title: "Web Design / Development",
-      desc: "Beautiful, responsive websites built to scale and perform.",
-      icon: "💻",
-    },
-    {
-      title: "App Development",
-      desc: "Custom mobile apps that engage users and boost growth.",
-      icon: "📱",
-    },
-    {
-      title: "Digital Marketing",
-      desc: "AI-driven marketing strategies to grow your business.",
-      icon: "📢",
-    },
-  ];
-
+  { title: "Web Design / Development", desc: "Beautiful, responsive websites built to scale and perform.", icon: "💻" },
+  { title: "App Development", desc: "Custom mobile apps that engage users and boost growth.", icon: "📱" },
+  { title: "Digital Marketing", desc: "AI-driven marketing strategies to grow your business.", icon: "📢" },
+];
   return (
     <div className="font-sans text-gray-900">
       {/* Hero Section */}
@@ -69,7 +58,7 @@ export default function Home() {
           transition={{ repeat: Infinity, duration: 6 + i * 2, ease: "linear" }} > 
           {item} </motion.div> ))} </div> 
         </motion.div>
-    </section>
+      </section>
 
       {/* Services Section */}
       <section className="py-20 px-8 bg-[#fdfaf6] text-center">
@@ -123,7 +112,7 @@ export default function Home() {
           </Link>
         </motion.div>
       </section>
-
+    
      {/* Portfolio / Projects Section */}
 <section className="py-20 px-8 bg-[#fdfaf6] text-center">
   {/* Section Heading */}
@@ -154,12 +143,15 @@ export default function Home() {
       {
         title: "Kalki Motors Website",
         desc: [
-          "Responsive multi-brand two-wheeler platform",
-          "Integrated booking & service management",
+          "multi-brand two-wheeler platform",
+          "Enabled Door step service",
+          "live location integration",
+          "Instent mail with data of booking",
+          " booking & service management",
           "Fast, clean UI/UX design",
         ],
-        media: "/images/kalki-motors.png",
-        link: "https://kalkimotors.com",
+        media: "/images/kalki-motors.jpg",
+        link: "https://kalki-motors.vercel.app/",
       },
       {
         title: "VisionReality Mobile App",
@@ -168,22 +160,25 @@ export default function Home() {
           "AI-driven user engagement",
           "Seamless cross-platform support",
           "PWA enabled ready to download",
-          "gewhdbwijehfijw",
-          "bhjcdbjvsdjfcjsdlicj",
+          "your vision into reality",
+          "you idea into reality with in weeks",
         ],
-        media: "/images/visionreality-app.png",
-        link: "https://visionreality.com/app",
+        media: "/images/visionreality-app.jpg",
+        link: "https://vision-reality-4u.vercel.app/",
       },
       
       {
-        title: "E-Commerce Solution",
+        title: "DignifyDeals E-Commerce",
         desc: [
+          "fully e-commerce app",
+          "API integration",
+          "custom admin panel ",
           "Custom online store design",
           "Payment gateway integration",
           "Optimized for conversions",
         ],
-        media: "/images/ecommerce.png",
-        link: "https://visionreality.com/ecommerce",
+        media: "/images/ecommerce.jpg",
+        link: "https://dignifydeals-45.vercel.app/",
       },
     ].map((project, i) => (
       <motion.div

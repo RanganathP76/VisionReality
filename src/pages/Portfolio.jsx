@@ -5,7 +5,7 @@ function Portfolio() {
     {
       title: "🚗 Kalki Motors",
       tagline: "Multi-branded two-wheeler sales & doorstep service",
-      image: "/images/kalki-motors.png", // place your image in public/images folder
+      image: "/images/kalki-motors.jpg", // place your image in public/images folder
       points: [
         "Developed a responsive website with modern UI/UX.",
         "Integrated service booking system with location tracking.",
@@ -15,28 +15,31 @@ function Portfolio() {
       link: "https://kalkimotors.vercel.app"
     },
     {
-      title: "📱 Doorstep Motor Service App",
+      title: "📱 Ecommerce app ",
       tagline: "On-demand bike & scooter service at your doorstep",
-      image: "/images/doorstep-service.png",
+      image: "/images/ecommerce.jpg",
       points: [
+        "Custom Admin Panel",
+        "Custom Front end , Database , Backend",
         "Built cross-platform mobile app using React Native.",
         "Live location tracking & service status updates.",
         "Integrated payment gateway & booking management.",
-        "Customer-friendly dashboard with history & notifications."
+        "Customer-friendly dashboard with history & notifications.",
+
       ],
-      link: "https://visionreality.in/doorstep-service"
+      link: "https://dignifydeals-45.vercel.app/"
     },
     {
-      title: "💼 Startup Growth Campaign",
+      title: "💼 Vision Reality",
       tagline: "Digital marketing & branding for emerging startups",
-      image: "/images/startup-campaign.png",
+      image: "/images/visionreality-app.jpg",
       points: [
         "End-to-end digital marketing strategy (SEO, Ads, Social Media).",
         "Brand storytelling with engaging content.",
         "Analytics-driven campaigns to increase leads.",
         "Scaled multiple startups to 10x growth."
       ],
-      link: "https://visionreality.in/startup-campaign"
+      link: "https://kalki-motors.vercel.app/"
     }
   ];
 
