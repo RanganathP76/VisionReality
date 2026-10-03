@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="col">
           <h5>Contact</h5>
           <p className="muted">visionreality4uofficial@gmail.com</p>
-          <p className="muted">+91 80500 84991</p>
+          <p className="muted">+91 74833 88536</p>
 
           {/* Social Icons */}
           <div className="social-icons" style={{ marginTop: "8px", display: "flex", gap: "12px" }}>
