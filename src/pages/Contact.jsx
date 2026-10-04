@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
 
 export default function Contact() {
+  // PASTE YOUR NEW DEPLOYMENT URL HERE
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbz2Z_GTlLi4sKGl-u6_u_lau_NstJ7zhGdv7dr36ko1Fk0803Op4bGoYyyupqo1h0-f/exec";
+    "https://script.google.com/macros/s/AKfycbwh6Uz30QupjxHM7wkYRIHcffvnH-unG9BYz5GyftXW-9ToGY0S7cEDRGjPZ4Bu94qk/exec";
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -20,15 +21,12 @@ export default function Contact() {
       await fetch(SCRIPT_URL, {
         method: "POST",
         body: formData,
-        mode: "no-cors", // <-- THIS IS THE FIX
+        mode: "no-cors",
       });
       
-      // With no-cors, we don't get a readable response back, 
-      // so if it doesn't throw a network error, we assume success.
       setIsSuccess(true);
       e.target.reset();
       
-      // Reset success message after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (err) {
       console.error(err);
@@ -92,7 +90,7 @@ export default function Contact() {
                   <div>
                     <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Call Us</h4>
                     <a href="tel:+917483388536" className="text-lg font-medium hover:text-[#b8860b] transition-colors">
-                      +91 74833 88536
+                      +91 7483388536
                     </a>
                   </div>
                 </div>
@@ -140,17 +138,20 @@ export default function Contact() {
                 </motion.div>
               )}
 
+              {/* Name Field (Full Width) */}
+              <div className="mb-6">
+                <label className="block text-sm font-bold text-gray-700 mb-2">Your Name</label>
+                <input 
+                  name="name" 
+                  type="text"
+                  placeholder="John Doe" 
+                  required 
+                  className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#b8860b]/50 focus:border-[#b8860b] transition-all"
+                />
+              </div>
+
+              {/* Email & Phone Fields (Side by Side) */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">Your Name</label>
-                  <input 
-                    name="name" 
-                    type="text"
-                    placeholder="John Doe" 
-                    required 
-                    className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#b8860b]/50 focus:border-[#b8860b] transition-all"
-                  />
-                </div>
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
                   <input
@@ -161,8 +162,19 @@ export default function Contact() {
                     className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#b8860b]/50 focus:border-[#b8860b] transition-all"
                   />
                 </div>
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Mobile Number</label>
+                  <input
+                    name="phone"
+                    type="tel"
+                    placeholder="+91 00000 00000"
+                    required
+                    className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#b8860b]/50 focus:border-[#b8860b] transition-all"
+                  />
+                </div>
               </div>
 
+              {/* Service Selection Dropdown */}
               <div className="mb-6">
                 <label className="block text-sm font-bold text-gray-700 mb-2">What are you looking for?</label>
                 <div className="relative">
@@ -196,6 +208,7 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* Message Field */}
               <div className="mb-8">
                 <label className="block text-sm font-bold text-gray-700 mb-2">Project Details</label>
                 <textarea 
