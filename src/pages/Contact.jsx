@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
 
 export default function Contact() {
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyXpHQJB_7iY0Q9k7ZdleqCfmo-3EKENmbKjb3zc8V-GPoD1M30ZLsU-qAeslmAssZ-/exec";
+    "https://script.google.com/macros/s/AKfycbz2Z_GTlLi4sKGl-u6_u_lau_NstJ7zhGdv7dr36ko1Fk0803Op4bGoYyyupqo1h0-f/exec";
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -20,7 +20,11 @@ export default function Contact() {
       await fetch(SCRIPT_URL, {
         method: "POST",
         body: formData,
+        mode: "no-cors", // <-- THIS IS THE FIX
       });
+      
+      // With no-cors, we don't get a readable response back, 
+      // so if it doesn't throw a network error, we assume success.
       setIsSuccess(true);
       e.target.reset();
       
@@ -28,7 +32,7 @@ export default function Contact() {
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (err) {
       console.error(err);
-      alert("❌ Something went wrong. Please try again.");
+      alert("❌ Something went wrong. Please check your internet connection.");
     } finally {
       setIsSubmitting(false);
     }
